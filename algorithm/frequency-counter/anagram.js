@@ -1,18 +1,11 @@
-const anagramOrNot = (str1, str2) => {
-    if (str1.length !== str2.length) return false;
-    let object = {};
-    for (const item of str1) {
-        object[item] = (object[item] || 0) + 1
-    }
-    for (const item of str2) {
-        if (!object[item]) {
-            return false;
-        } else {
-            --object[item];
-        }
-    }
-    return true;
+/**
+ * Question given two string s1 and s2
+ * we have to find all the characters of s1 is in s2
+ */
+
+const anagram = (s1, s2) => {
+    if (s1.length !== s2.length) return false;
+
 };
 
-
-console.log(anagramOrNot("anagrams", "nagramsl"));
+anagram('abcd', 'dbca');

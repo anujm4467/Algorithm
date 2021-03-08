@@ -1,22 +1,26 @@
+/**
+ * Question given two array one containing n number of elements and second array contain corresponding square
+ * we have to find the array 1 should have all square in array 2 
+ *  example : a1 [1,2,3],  a2 [1,4,9]
+*/
+
 const arraySquare = (arr1, arr2) => {
     if (arr1.length !== arr2.length) return false;
-    let object1 = {}, object2 = {};
+    let arr1Count = {}, arr2Count = {};
     for (const item of arr1) {
-        object1[item] = (object1[item] || 0) + 1;
+        arr1Count[item] = arr1Count[item] ? arr1Count[item] + 1 : 1;
     }
     for (const item of arr2) {
-        object2[item] = (object2[item] || 0) + 1;
+        arr2Count[item] = arr2Count[item] ? arr2Count[item] + 1 : 1;
     }
-    for (const key in object1) {
-        if (!(key * key in object2)) {
-            return false;
-        }
-        if (object2[key * key] !== object1[key]) {
+    for (const item in arr1Count) {
+        if (item * item in arr2Count) {
+            arr1Count[item] = arr1Count[item] - 1;
+        } else {
             return false;
         }
     }
     return true;
 };
 
-console.log(arraySquare([1, 2, 3], [1, 4, 9]));
-;
+console.log(arraySquare([0, 2, 3], [0, 4, 9]));
