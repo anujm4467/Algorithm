@@ -23,4 +23,6 @@ const pushZerosToEnd = (arr) => {
 }
 
 
-console.log(pushZerosToEnd([1, 9, 0, 4, 12, 0]))
+console.log(pushZerosToEnd([0, 1, 9, 0, 4, 12, 0]))
+
+
