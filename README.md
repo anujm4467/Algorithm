@@ -4,4 +4,5 @@
 
 youtube chanel for leetcode solution
 
-\*codebix
+codebix :- https://www.youtube.com/channel/UCZJRtZh8O6FKWH49YLapAbQ
+Aditya Verma :- https://www.youtube.com/channel/UC5WO7o71wvxMxEtLRkPhiQQ
