@@ -23,6 +23,28 @@ class SinglyLinkedList {
             this.tail = newNode;
         }
         this.length++;
+        return this;
+    }
+
+    traverse() {
+        let current = this.head;
+        while (current) {
+            console.log(current.value);
+            current = current.next;
+        }
+    }
+
+    pop() {
+        let current = this.head;
+        let newTail = current;
+        while (current.next) {
+            newTail = current;
+            current = current.next;
+        }
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--;
+        return current;
     }
 }
 
@@ -32,3 +54,5 @@ list.push('b');
 list.push('c');
 list.push('d');
 list.push('e');
+list.pop();
+list.traverse()
